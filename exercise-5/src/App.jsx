@@ -1,24 +1,24 @@
-import React from "react";
-import { students } from "./data.js"; // Make sure this path is correct
-import './index.css'; // Import your CSS (if not already imported globally)
-
+import React from 'react';
+import Card from "./Card";  // Importing the Card component
+import data from './data';  // Importing the data array
 
 function App() {
   return (
-    <>
-      <header>
-        <h1>My Items</h1> {/* Changed to "My Items" to match your example */}
-      </header>
-      <main>
-        <div className="cards-view"> {/* Added the outer div */}
-          <div className="cards-grid"> {/* Added the grid div */}
-            {students.map((studentData) => (
-              <Place key={studentData.id} student={studentData} /> // Pass the whole student object
-            ))}
-          </div>
-        </div>
-      </main>
-    </>
+    <div className="app">
+      <h1>Card List</h1>
+      <div className="card-list">
+        {data.map(item => (
+          <Card
+            key={item.id}
+            image={item.image}
+            name={item.name}
+            hobbies={item.hobbies}
+            gender={item.gender}
+            address={item.address}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 

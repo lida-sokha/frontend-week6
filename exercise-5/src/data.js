@@ -1,28 +1,20 @@
-
-export const students = [
-  {
-    id: "1",
-    title: ["Class C", "Soccer", "Tennis"],
-    image: "/1.png"
-  },
-  {
-    id: "2",
-    title: ["Class A", "Piano"],
-    image: "/2.png"
-  },
-  {
-    id: "3",
-    title: ["Class B", "Video Games"],
-    image: "/3.png"
-  },
-  {
-    id: "4",
-    title: ["Class C", "I like all"],
-    image: "/4.png"
-  },
-  {
-    id: "5",
-    title: ["Class B", "Basketball"],
-    image: "/5.png"
-  },
-];
+const data = [
+    {
+      id: 1,
+      image: '/assets/1.png',
+      name: 'John Doe',
+      hobbies: 'Reading, Hiking, Gaming',
+      gender: 'Male',
+      address: '123 Main St, City, Country',
+    },
+    {
+      id: 2,
+      image: '/assets/2.png',
+      name: 'Jane Smith',
+      hobbies: 'Cooking, Painting',
+      gender: 'Female',
+      address: '456 Oak Ave, City, Country',
+    }
+  ];
+  
+  export default data;
