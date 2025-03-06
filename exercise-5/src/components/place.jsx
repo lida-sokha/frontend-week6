@@ -1,11 +1,15 @@
-export default function Place({id,title, image, alt}) {
-    return (
-        <li key="student-category" className="student-item">
-            <button>
-            {/* <img src="the place image src" alt="the place image alt" /> */}
-            <img src={image} alt={alt}></img>
-            <h3>"the place title"</h3>
-            </button>
-        </li>
+export default function Place({ student }) { // Receive the whole student object
+        return (
+        <div className="card">
+            <h4>{student.title[0]}</h4>
+            <small>{student.title.slice(1).join(", ")}</small>
+            <p>
+            Try something you've always been curious about, whether it's
+            painting, cooking, coding, gardening, or playing a musical
+            instrument. Hobbies can be a great way to relax and discover new
+            passions
+            </p>
+            <img src={student.image} alt={student.image.alt} /> {/* Access image.alt from the student object */}
+        </div>
         );
     }
