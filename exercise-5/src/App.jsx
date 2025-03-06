@@ -1,21 +1,19 @@
 import React from 'react';
-import Card from "./Card";  // Importing the Card component
-import data from './data';  // Importing the data array
-
+import data from './data'; // Import the data array
+import './index.css';
 function App() {
   return (
     <div className="app">
       <h1>Card List</h1>
       <div className="card-list">
         {data.map(item => (
-          <Card
-            key={item.id}
-            image={item.image}
-            name={item.name}
-            hobbies={item.hobbies}
-            gender={item.gender}
-            address={item.address}
-          />
+          <div key={item.id} className="card">
+            <img src={item.image} alt={item.name} />
+            <h3>{item.name}</h3>
+            <p><strong>Hobbies:</strong> {item.hobbies}</p>
+            <p><strong>Gender:</strong> {item.gender}</p>
+            <p><strong>Address:</strong> {item.address}</p>
+          </div>
         ))}
       </div>
     </div>
