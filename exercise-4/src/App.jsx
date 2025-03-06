@@ -12,6 +12,15 @@ function App() {
         <section className="places-category">
           <ul className="places">
             {/* For each place from AVAILABLE_PLACES, create a Place component */}
+                {AVAILABLE_PLACES.map((data) => (
+                  <Place 
+                          key={data.id} 
+                          id={data.id} 
+                          title={data.title} 
+                          image={data.image.src} 
+                          alt={data.image.alt} 
+                  />
+            ))}
           </ul>
         </section>
       </main>
